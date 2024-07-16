@@ -17,9 +17,9 @@ const userSchema = new mongoose.Schema(
         required: true,
       },
 
-      password: {
+      avatar: {
         type: String,
-        default: "https://media.istockphoto.com/id/2098359215/photo/digital-marketing-concept-businessman-using-laptop-with-ads-dashboard-digital-marketing.jpg?s=1024x1024&w=is&k=20&c=q6RTyRcP6Lli25bBXmKz3F3sIAVSu5PthcuOiAniHzE="
+        default: "https://lh3.googleusercontent.com/a/ACg8ocLZ9hSofcfrCZojtfOchfj7ct_G2HESCldWjZ3VWdXM7Ab1zeY5=s360-c-no"
       },
 
     }, { timestamps: true } );
