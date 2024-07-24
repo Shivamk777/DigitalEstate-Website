@@ -40,7 +40,7 @@ export default function Home() {
         const data = await res.json();
         setSaleListings(data);
       } catch (error) {
-        log(error);
+        console.log(error);
       }
     };
     fetchOfferListings();
@@ -55,17 +55,18 @@ export default function Home() {
           <br />
           place with ease
         </h1>
-        <div className='text-gray-400 text-xs sm:text-sm'>
-          Sahand Estate is the best place to find your next perfect place to
+        <div className='text-gray-500 text-xs sm:text-sm'>
+          Digital Estate is the best place to find your next perfect place to
           live.
           <br />
           We have a wide range of properties for you to choose from.
         </div>
         <Link
           to={'/search'}
-          className='text-xs sm:text-sm text-blue-800 font-bold hover:underline'
+          className='text-xs sm:text-lg text-blue-500 font-bold hover:underline'
         >
-          Let's get started...
+          Lets get started...
+
         </Link>
       </div>
 
@@ -74,16 +75,17 @@ export default function Home() {
         {offerListings &&
           offerListings.length > 0 &&
           offerListings.map((listing) => (
+             // eslint-disable-next-line react/jsx-key
             <SwiperSlide>
-              <div
-                style={{
-                  background: `url(${listing.imageUrls[0]}) center no-repeat`,
-                  backgroundSize: 'cover',
-                }}
-                className='h-[500px]'
-                key={listing._id}
-              ></div>
-            </SwiperSlide>
+            <div
+              style={{
+                background: `url(${listing.imageUrls[0]}) center no-repeat`,
+                backgroundSize: 'cover',
+              }}
+              className='h-[500px]'
+              key={listing._id}
+            ></div>
+          </SwiperSlide>
           ))}
       </Swiper>
 

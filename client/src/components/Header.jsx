@@ -21,15 +21,16 @@ export default function Header() {
     if (searchTermFromUrl) {
       setSearchTerm(searchTermFromUrl);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.search]);
 
   return (
-    <header className='bg-slate-400 shadow-md'>
+    <header className='bg-blue-400 shadow-md'>
       <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
         <Link to='/'>
-          <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
-            <span className='text-blue-700'>Digital</span>
-            <span className='text-blue-700'>Estate</span>
+          <h1 className='font-bold text-sm sm:text-2xl flex flex-wrap'>
+            <span className='text-amber-400'>Digital</span>
+            <span className='text-gray-100'>Estate</span>
           </h1>
         </Link>
         <form
@@ -48,21 +49,21 @@ export default function Header() {
             <FaSearch className='text-slate-600' />
           </button>
         </form>
-        <ul className='flex gap-4'>
+        <ul className='flex gap-6'>
           <Link to='/'>
-            <li className='hidden sm:inline text-slate-900 font-bold hover:underline'>
+            <li className='hidden sm:inline text-slate-100 text-lg font-bold hover:underline'>
               Home
             </li>
           </Link>
           <Link to='/about'>
-            <li className='hidden sm:inline text-slate-900 font-bold hover:underline'>
+            <li className='hidden sm:inline text-slate-700 text-lg font-bold hover:underline'>
               About
             </li>
           </Link>
           <Link to='/profile'>
             {currentUser ? (
               <img
-                className='rounded-full h-7 w-7 object-cover'
+                className='rounded-full h-9 w-9 object-cover'
                 src={currentUser.avatar}
                 alt='profile'
               />

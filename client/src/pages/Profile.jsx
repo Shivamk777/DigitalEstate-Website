@@ -37,6 +37,7 @@ export default function Profile() {
     if (file) {
       handleFileUpload(file);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [file] );
 
   const handleFileUpload = (file) => {
@@ -52,6 +53,7 @@ export default function Profile() {
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
         setFilePerc(Math.round(progress));
       },
+      // eslint-disable-next-line no-unused-vars
       (error) => {
         setFileUploadError(true);
       },
@@ -120,6 +122,7 @@ export default function Profile() {
       }
       dispatch(deleteUserSuccess(data));
     } catch (error) {
+      // eslint-disable-next-line no-undef
       dispatch(deleteUserFailure(data.message));
     }
   }
@@ -161,7 +164,7 @@ export default function Profile() {
 
   return (
     <div className='p-3 max-w-lg mx-auto'>
-      <h1 className='text-3xl text-blue-700 font-semibold text-center my-7'>User Profile</h1>
+      <h1 className='text-3xl text-sky-600 font-semibold text-center my-7'>User Profile</h1>
     
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
       <input
@@ -186,7 +189,7 @@ export default function Profile() {
           ) : filePerc > 0 && filePerc < 100 ? (
             <span className='text-slate-700'>{`Uploading ${filePerc}%`}</span>
           ) : filePerc === 100 ? (
-            <span className='text-green-700'>Image successfully uploaded!</span>
+            <span className='text-green-800'>Image successfully uploaded!</span>
           ) : (
             ''
           )}
@@ -223,7 +226,7 @@ export default function Profile() {
         >
           {loading ? 'Loading...' : 'Update'}
         </button>
-        <Link className='bg-sky-500 text-white p-3 rounded-lg uppercase text-center hover:opacity-95' to={"/create-listing"}>
+        <Link className='bg-sky-600 text-white p-3 rounded-lg uppercase text-center hover:opacity-95' to={"/create-listing"}>
           Create Listing
         </Link>
        
@@ -232,10 +235,10 @@ export default function Profile() {
         <div className='flex justify-between mt-5'>
         <span
           onClick={handleDeleteUser}
-          className='text-red-700 cursor-pointer' >
+          className='text-sky-700 cursor-pointer' >
           Delete account
         </span>
-        <span onClick={handleSignOut} className='text-violet-800 cursor-pointer'>
+        <span onClick={handleSignOut} className='text-sky-700 cursor-pointer'>
           Sign out
         </span>
       </div>
@@ -244,7 +247,7 @@ export default function Profile() {
       <p className='text-green-700 mt-5'>
         {updateSuccess ? 'User is updated successfully!' : ''}
       </p>
-      <button onClick={handleShowListings} className='text-green-700 w-full'>
+      <button onClick={handleShowListings} className='text-green-700  w-full'>
         Show Listings
       </button>
       <p className='text-red-700 mt-5'>
