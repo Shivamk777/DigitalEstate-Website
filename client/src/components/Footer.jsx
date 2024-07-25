@@ -1,9 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="bg-blue-400 h-80 bottom-0 text-white flex flex-col ">  {/* Added flex and flex-col */}
-      <div className="container mx-auto flex flex-grow ml-44">  {/* Added flex and flex-grow */}
+    <footer className="bg-blue-400 h-80 bottom-0 text-white flex   ">  {/* Added flex and flex-col */}
+      <div className="container mx-auto flex flex-grow flex-col ml-44">  {/* Added flex and flex-grow */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div className="ml-40 mt-10 ">
+          <div className="ml-24 mt-10 ">
             <h3 className="text-lg font-bold mb-4 ">Properties</h3>
             <ul>
               <li><a href="#" className="hover:text-blue-500">Residential</a></li>
@@ -37,17 +37,12 @@ export default function Footer() {
             </ul>
           </div>
         </div>
+       
+        <p className="text-center mt-20 mr-60  ">
+          &copy; {new Date().getFullYear()} DigitalEstate . All Rights Reserved.
+        </p>
       </div>
 
-      <div className="flex justify-center items-center bg-gray-700 h-20 w-full">  {/* Added flex and adjusted styles */}
-        <p className="text-center">
-          &copy; {new Date().getFullYear()} Your Company Name. All Rights Reserved.
-        </p>
-        <div className="text-center mt-2">
-          <a href="/privacy-policy" className="hover:text-blue-500 " >Privacy Policy</a> | 
-          <a href="/terms-of-service" className="hover:text-blue-500">Terms of Service</a>
-        </div>
-      </div>
     </footer>
   );
 }

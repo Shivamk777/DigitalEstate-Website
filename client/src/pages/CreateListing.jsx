@@ -169,8 +169,8 @@ export default function CreateListing() {
             placeholder='Name'
             className='border p-3 rounded-lg'
             id='name'
-            maxLength='62'
-            minLength='10'
+            maxLength='20'
+            minLength='3'
             required
             onChange={handleChange}
             value={formData.name}
@@ -286,7 +286,7 @@ export default function CreateListing() {
               <div className='flex flex-col items-center'>
                 <p>Regular price</p>
                 {formData.type === 'rent' && (
-                  <span className='text-xs'>(rs / month)</span>
+                  <span className='text-xs'>(Rs  / month)</span>
                 )}
               </div>
             </div>
@@ -306,7 +306,7 @@ export default function CreateListing() {
               <div className='flex flex-col items-center'>
                 <p>Discounted price</p>
                 {formData.type === 'rent' && (
-                    <span className='text-xs'>(rs / month)</span>
+                    <span className='text-xs'>(Rs  / month)</span>
                   )}
               </div>
             </div>
