@@ -32,7 +32,7 @@ export default function Footer() {
           <h3 className="text-lg font-bold mb-4 ">Your Address</h3>
             <ul>
               <li><a href="#" className="hover:text-blue-500">Phone: 123-456-7890</a></li>
-              <li><a href="#" className="hover:text-blue-500">Email: your@email.com</a></li>
+              <li><a href="#" className="hover:text-blue-500">Email: DigitalEstate@email.com</a></li>
               <li><a href="#" className="hover:text-blue-500">Land</a></li>
             </ul>
           </div>
