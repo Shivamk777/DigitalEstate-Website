@@ -1,0 +1,1 @@
+The Digital E-State project is a real estate platform designed to simplify property management and transactions. It includes features for property listing, searching, and user management, providing an efficient and user-friendly experience for buyers, sellers, and agents.
